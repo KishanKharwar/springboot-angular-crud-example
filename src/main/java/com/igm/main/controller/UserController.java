@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:8080")
 public class UserController {
 
   private final UserRepository userRepository;
@@ -28,6 +28,8 @@ public class UserController {
 
   @PostMapping("/users")
   void addUser(@RequestBody User user) {
+    user.setEmail(user.getName().toLowerCase() + "@domain.com");
     userRepository.save(user);
+    System.out.println(user);
   }
 }

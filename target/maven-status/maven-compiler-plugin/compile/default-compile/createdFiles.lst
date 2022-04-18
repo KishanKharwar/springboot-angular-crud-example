@@ -1,0 +1,4 @@
+com\igm\main\controller\UserController.class
+com\igm\main\repositories\UserRepository.class
+com\igm\main\SpringAngularApplication.class
+com\igm\main\entities\User.class
