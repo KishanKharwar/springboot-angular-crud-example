@@ -1,4 +1,4 @@
-Sringboot-Angular-crud-example
+Sringboot-Angular-Crud with deployment in JBOSS Server
 ===============================
 This project is about implementing basic insert and get operation on a springboot backend server having h2 as in-memory database, calling from angular front-end.
 And also deploying the springboot-project along side with angular in one war application. 
