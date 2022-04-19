@@ -19,3 +19,15 @@ For basic understanding please follow this link [Baeldung Springboot Angular][ht
         1. build the project to create dist files using command `ng build --prod --base-href /<context-path> --deploy-url /<context-path>` eg. `ng build --prod --base-href /spring-angular --deploy-url /spring-angular`
 1. Need to add maven-resource plugin pointing to the front-end/angular files i.e., present in `{project.dir}/src/main/resources/public` folder       
  
+# Enabling logger compatible with the jboss/wildfly server
+In the project we have followed : 
+1. disabled the logger class supported by jboss server by adding a file `src/main/webapp/WEB-INF/jboss-deployment-structure.xml`.
+1. added our own `src/main/resources/logback.xml` for enabling the logs. 
+1. At jboss level :
+    1. need to add the logger level information inside `wildfly-24.0.0.Final/standalone/configuration/standlone.xml`
+        ```
+        <logger category="com.iedr">
+            <level name="INFO"/>
+        </logger> 
+        ```
+    1. log-files will be generated at server level i.e., `wildfly-24.0.0.Final/bin`, here in this project we are extracting the logs in `logs/app.log` file. the same will be present at server layer inside `wildfly/bin` directory.
