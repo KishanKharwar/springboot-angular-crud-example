@@ -2,7 +2,7 @@ Sringboot-Angular-Crud with deployment in JBOSS Server
 ===============================
 This project is about implementing basic insert and get operation on a springboot backend server having h2 as in-memory database, calling from angular front-end.
 And also deploying the springboot-project along side with angular in one war application. 
-This project is used in deployment [Angular Form Example][git@github.com:KishanKharwar/angular-form-textbox-submit.git]
+This project is used in deployment ```git@github.com:KishanKharwar/angular-form-textbox-submit.git```
 # Basic logic to connect angular-ui with springboot backend
 For basic understanding please follow this link [Baeldung Springboot Angular][https://www.baeldung.com/spring-boot-angular-web]
 
